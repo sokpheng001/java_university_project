@@ -40,7 +40,7 @@ public class ApplicationView {
         // footer of software
         windows.add(Footer.description(), BorderLayout.PAGE_END);
         //
-        windows.setTitle("Dictionary");
+        windows.setTitle("Royal University of Phnom Penh - Dictionary");
         windows.setSize(800,500);
         windows.setLocationRelativeTo(null);
         windows.setVisible(true);
