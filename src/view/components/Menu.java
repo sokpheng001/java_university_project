@@ -38,7 +38,7 @@ public class Menu {
             }
         });
         //
-        menuBar.setBackground(Color.LIGHT_GRAY);
+        menuBar.setBackground(Color.WHITE);
         //Set openItem size (height)
 //        openItem.setPreferredSize(new Dimension(150,openItem.getPreferredSize().height));
         // Add menu items to menus

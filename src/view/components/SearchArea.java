@@ -3,17 +3,19 @@ package view.components;
 import view.WindowsFrame;
 import view.WindowsFrameObject;
 
+import javax.crypto.spec.OAEPParameterSpec;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class SearchInputBox {
+public class SearchArea {
     private final static WindowsFrame frame = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
     private final static JPanel panel = new JPanel();
-    private final static JTextField searchField = new JTextField(20);
+    public final static JTextField searchField = new JTextField(30);
     private final static Dimension textFieldSize = searchField.getPreferredSize();
     private final static JButton searchButton = new JButton("Search");
-    public static void getSearchInput(){
+    public static JPanel getSearchInput(){
+
         // Action listener for the search button
         searchButton.addActionListener(e -> {
             String searchText = searchField.getText();
@@ -21,6 +23,8 @@ public class SearchInputBox {
 //            JOptionPane.showMessageDialog(frame, "Searching for: " + searchText);
             System.out.println(searchText);
         });
+//        search button
+
 //      key listener
         searchField.addKeyListener(new KeyListener() {
                                        @Override
@@ -39,6 +43,8 @@ public class SearchInputBox {
                                        }
                                    }
         );
+//         add more
+
         panel.add(searchField);
         panel.add(searchButton);
         //
@@ -55,7 +61,7 @@ public class SearchInputBox {
             @Override
             public void focusLost(FocusEvent e) {
                 if (searchField.getText().isEmpty()) {
-                    searchField.setText("Enter text here"); // Set placeholder text when it loses focus and is empty
+                    searchField.setText("Enter text here..."); // Set placeholder text when it loses focus and is empty
                 }
             }
         });
@@ -71,7 +77,8 @@ public class SearchInputBox {
             }
         });
         //
-        frame.getContentPane().add(panel);
-        frame.pack(); // Adjusts the frame size to fit its components
+//        frame.getContentPane().add(panel);
+        //frame.pack(); // Adjusts the frame size to fit its components
+        return panel;
     }
 }
