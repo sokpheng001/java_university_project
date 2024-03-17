@@ -2,6 +2,7 @@ package repository;
 
 import java.io.*;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -17,6 +18,7 @@ public class DataStore {
             while (true){
                 if((word = bufferedReader.readLine())!=null){
                     String [] result = word.split(",");
+                    System.out.println(Arrays.toString(result));
                     stringStringMap.put(result[0],result[1]);
                 }else {
                     break;

@@ -1,6 +1,7 @@
 package view;
 
 import utils.IconMaker;
+import utils.WindowsFrameObject;
 import view.components.Content;
 import view.components.Footer;
 import view.components.Menu;

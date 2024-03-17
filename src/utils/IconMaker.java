@@ -1,7 +1,5 @@
 package utils;
 
-import view.WindowsFrameObject;
-
 import javax.swing.*;
 import java.awt.*;
 

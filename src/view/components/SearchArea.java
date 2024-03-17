@@ -1,9 +1,8 @@
 package view.components;
 
 import view.WindowsFrame;
-import view.WindowsFrameObject;
+import utils.WindowsFrameObject;
 
-import javax.crypto.spec.OAEPParameterSpec;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -34,7 +33,7 @@ public class SearchArea {
                                        @Override
                                        public void keyPressed(KeyEvent e) {
                                            if(e.getKeyCode()==KeyEvent.VK_ENTER){
-                                               JOptionPane.showMessageDialog(frame,searchField.getText());
+//                                               JOptionPane.showMessageDialog(frame,searchField.getText());
                                            }
                                        }
                                        @Override

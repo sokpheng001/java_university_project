@@ -1,4 +1,6 @@
-package view;
+package utils;
+
+import view.WindowsFrame;
 
 public enum WindowsFrameObject {
     WINDOWS_APP_OBJECT(new WindowsFrame());

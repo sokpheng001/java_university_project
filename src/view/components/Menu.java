@@ -1,7 +1,7 @@
 package view.components;
 
 import view.WindowsFrame;
-import view.WindowsFrameObject;
+import utils.WindowsFrameObject;
 
 import javax.swing.*;
 import java.awt.*;

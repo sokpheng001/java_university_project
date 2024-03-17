@@ -2,7 +2,7 @@ package view.components;
 
 import repository.DataStore;
 import view.WindowsFrame;
-import view.WindowsFrameObject;
+import utils.WindowsFrameObject;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -12,7 +12,6 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PrimitiveIterator;
 
 public class Content{
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
@@ -36,27 +35,11 @@ public class Content{
             public void valueChanged(ListSelectionEvent e) {
                 if (!e.getValueIsAdjusting()) { // Ensure the event is not fired multiple times
                     String selectedWord = jList.getSelectedValue();
-                    System.out.println(selectedWord);
+//                    System.out.println(selectedWord);
 //                    JOptionPane.showMessageDialog(windows, "You selected: " + selectedWord);
                     jTextArea.setText(
-                            """
-                                    Document Title: Sample Document
-
-                                    Introduction:
-                                    This is a sample document written in Java String. It demonstrates how to represent
-                                    a document with various sections and text content.
-
-                                    Main Content:
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisi vel enim eleifend
-                                    ultricies vitae vel velit. Integer auctor massa ut sem bibendum, at dignissim enim
-                                    pellentesque. Nullam hendrerit massa at tincidunt ultricies. Ut id arcu lectus. Donec
-                                    placerat quis velit in varius. In hac habitasse platea dictumst. Duis pretium lorem eget
-                                    eros efficitur, a fringilla urna lobortis. Nam sit amet nisi vitae velit iaculis sodales.
-                                    Maecenas in lacinia nisl. Fusce congue tortor justo, non ultricies elit malesuada id.
-
-                                    Conclusion:
-                                    This concludes the sample document. Thank you for reading.\t""" + selectedWord
-                            );
+                            DataStore.getAllWords().get(selectedWord)
+                    );
                     jTextArea.setEditable(false);
                     content.add(jScrollPane);
                     content.revalidate();
@@ -68,17 +51,17 @@ public class Content{
         SearchArea.searchField.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                System.out.println(SearchArea.searchField.getText());
+//                System.out.println(SearchArea.searchField.getText());
                 filterWords(SearchArea.searchField.getText());
             }
             @Override
             public void removeUpdate(DocumentEvent e) {
-                System.out.println(SearchArea.searchField.getText());
+//                System.out.println(SearchArea.searchField.getText());
                 filterWords(SearchArea.searchField.getText());
             }
             @Override
             public void changedUpdate(DocumentEvent e) {
-                System.out.println(SearchArea.searchField.getText());
+//                System.out.println(SearchArea.searchField.getText());
                 filterWords(SearchArea.searchField.getText());
             }
         });
@@ -89,15 +72,19 @@ public class Content{
         return content;
     }
     private static void filterWords(String word){
-        DefaultListModel<String> defaultListModel = new DefaultListModel<>();
-        List<String> stringArrayList =lists;
-        stringArrayList.forEach(e->{
-            String item = e.toLowerCase();
-            if(item.contains(word.toLowerCase())){
-                defaultListModel.addElement(e);
-            }
-        });
-        words = defaultListModel;
-        jList.setModel(words);
+        try{
+            DefaultListModel<String> defaultListModel = new DefaultListModel<>();
+            List<String> stringArrayList =lists;
+            stringArrayList.forEach(e->{
+                String item = e.toLowerCase();
+                if(item.contains(word.toLowerCase())){
+                    defaultListModel.addElement(e);
+                }
+            });
+            words = defaultListModel;
+            jList.setModel(words);
+        }catch (Exception exception){
+            System.out.println(exception.getMessage());
+        }
     }
 }
