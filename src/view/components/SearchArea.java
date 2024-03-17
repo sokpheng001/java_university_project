@@ -60,9 +60,9 @@ public class SearchArea {
             }
             @Override
             public void focusLost(FocusEvent e) {
-                if (searchField.getText().isEmpty()) {
-                    searchField.setText("Enter text here..."); // Set placeholder text when it loses focus and is empty
-                }
+//                if (searchField.getText().isEmpty()) {
+//                    searchField.setText("Enter text here..."); // Set placeholder text when it loses focus and is empty
+//                }
             }
         });
         //

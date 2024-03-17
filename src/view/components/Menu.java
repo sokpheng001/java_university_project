@@ -16,6 +16,7 @@ public class Menu {
     private final static JMenu fileMenu = new JMenu("File");
     private final JMenu editMenu = new JMenu("Edit");
     private static final JMenu helpMenu = new JMenu("Help");
+    private static final JMenu accountMenu = new JMenu("Account");
     // Create menu items
     private final JMenuItem openItem = new JMenuItem("Open");
     private static final JMenuItem saveItem = new JMenuItem("Save");
@@ -51,6 +52,8 @@ public class Menu {
         menuBar.add(fileMenu);
 //        menuBar.add(editMenu);
         menuBar.add(helpMenu);
+//        account bar
+        menuBar.add(accountMenu);
         // Set menu bar to frame
         windows.setJMenuBar(menuBar);
     }

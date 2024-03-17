@@ -1,5 +1,6 @@
 package view.components;
 
+import repository.DataStore;
 import view.WindowsFrame;
 import view.WindowsFrameObject;
 
@@ -20,11 +21,10 @@ public class Content{
     private  static JList<String> jList;
     private  static List<String> lists;
     public static JPanel dictionaryContent(){
-        lists = List.of(
-                "Apple",
-                "Banana",
-                "Coconut"
-        );
+        lists = new ArrayList<>();
+        DataStore.getAllWords().forEach((k,v)->{
+            lists.add(k);
+        });
         words = new DefaultListModel<>();
         lists.forEach(words::addElement);
         jList = new JList<>(words);
@@ -55,7 +55,7 @@ public class Content{
                                     Maecenas in lacinia nisl. Fusce congue tortor justo, non ultricies elit malesuada id.
 
                                     Conclusion:
-                                    This concludes the sample document. Thank you for reading."""
+                                    This concludes the sample document. Thank you for reading.\t""" + selectedWord
                             );
                     jTextArea.setEditable(false);
                     content.add(jScrollPane);
