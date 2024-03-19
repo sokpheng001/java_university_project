@@ -100,7 +100,7 @@ public class LoadingFrame {
 //                        "Loading complete!", "Success", JOptionPane.INFORMATION_MESSAGE);
                 frame.setVisible(false);
 //                panel.setVisible(false);
-                ApplicationView.show();
+                ApplicationView.show();// call dictionary
             }
         };
         // Execute the SwingWorker
