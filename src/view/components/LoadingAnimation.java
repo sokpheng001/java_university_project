@@ -11,7 +11,7 @@ public class LoadingAnimation {
 
     private static JProgressBar jProgressBar;
     public static JProgressBar getLoading(){
-        jProgressBar = new JProgressBar();
+        jProgressBar = new JProgressBar(0,100);
         jProgressBar.setStringPainted(true);
         return jProgressBar;
     }
@@ -30,13 +30,11 @@ public class LoadingAnimation {
                 }
                 return null;
             }
-
             @Override
             protected void process(List<Integer> chunks) {
                 // Update the progress bar with the latest progress value
                 jProgressBar.setValue(chunks.getLast());
             }
-
             @Override
             protected void done() {
                 // Task is complete, perform any final actions
@@ -44,7 +42,6 @@ public class LoadingAnimation {
                         "Loading complete!", "Success", JOptionPane.INFORMATION_MESSAGE);
             }
         };
-
         // Execute the SwingWorker
         worker.execute();
     }
