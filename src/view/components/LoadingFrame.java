@@ -78,6 +78,7 @@ public class LoadingFrame {
 //                    System.out.println(getProgress());
                     // Sleep to simulate work being done
                     Thread.sleep(50);
+//                    read words from file
                     DataStore.getAllWords().forEach((k, v)->{
                         DataList.lists.add(k);
                     });
