@@ -13,6 +13,8 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.StringTemplate.STR;
+
 public class Content{
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
     private final static JPanel content = new JPanel(new GridLayout(0,2));
@@ -38,7 +40,11 @@ public class Content{
 //                    System.out.println(selectedWord);
 //                    JOptionPane.showMessageDialog(windows, "You selected: " + selectedWord);
                     jTextArea.setText(
-                            DataStore.getAllWords().get(selectedWord)
+                            STR."""
+                                    This is meaning of the word [ \{selectedWord} ]
+                                    Description:
+                                    \{DataStore.getAllWords().get(selectedWord)}
+                                    """
                     );
                     jTextArea.setEditable(false);
                     content.add(jScrollPane);

@@ -2,10 +2,8 @@ package view;
 
 import utils.IconMaker;
 import utils.WindowsFrameObject;
-import view.components.Content;
-import view.components.Footer;
+import view.components.*;
 import view.components.Menu;
-import view.components.SearchArea;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +13,10 @@ import java.awt.event.WindowEvent;
 public class ApplicationView {
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
     public ApplicationView(){
+//        loading
+        windows.add(LoadingAnimation.getLoading(), BorderLayout.CENTER);
+        LoadingAnimation.startLoading();
+//
         windows.setLayout(new BorderLayout());
         //
         IconMaker.getIcon();

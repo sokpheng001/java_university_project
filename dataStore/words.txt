@@ -1,0 +1,168 @@
+Apple: A round fruit with red or green skin and white flesh.
+Banana: A long curved fruit with yellow skin and soft, sweet flesh.
+Cherry: A small round fruit with red or black skin and a single hard stone.
+Orange: A round citrus fruit with thick orange skin and juicy segments.
+Mango: A tropical fruit with a sweet, juicy, and fragrant flesh.
+Strawberry: A small sweet red fruit with tiny edible seeds on its surface.
+Pineapple: A tropical fruit with a tough, spiky exterior and sweet, juicy yellow flesh.
+Grape: Small juicy fruit with a smooth skin, usually green, red, or purple.
+Watermelon: A large round fruit with green skin and sweet pink flesh.
+Kiwi: A small oval-shaped fruit with brown fuzzy skin and green or yellow flesh.
+Peach: A round juicy fruit with downy yellow or pink skin and a large stone.
+Pear: A sweet juicy fruit with a rounded shape and narrow neck.
+Blueberry: A small round fruit with dark blue skin, juicy flesh, and tiny seeds.
+Raspberry: A small soft red fruit that grows on bushes and has a sweet taste.
+Blackberry: A dark edible berry with a juicy sweet or sour taste.
+Plum: A small round fruit with a smooth skin, usually purple, red, or yellow.
+Lemon: A yellow citrus fruit with sour juice used in cooking and drinks.
+Lime: A small green citrus fruit with sour acidic juice.
+Avocado: A pear-shaped fruit with a rough green or black skin and creamy flesh.
+Papaya: A tropical fruit with yellow or orange flesh and black seeds.
+Coconut: A large brown oval fruit with a hard shell containing sweet white flesh and liquid.
+Fig: A soft sweet fruit with a thin skin and many seeds.
+Passionfruit: A round or oval fruit with a tough outer rind and aromatic seeds.
+Guava: A tropical fruit with green or yellow skin and pink or white flesh.
+Persimmon: A sweet orange fruit with a smooth skin and several seeds.
+Cranberry: A small red tart fruit often used in sauces and juices.
+Apricot: A small yellowish-orange fruit with a slightly tart flavor.
+Cantaloupe: A round melon with yellowish skin and sweet orange flesh.
+Honeydew: A large melon with smooth pale green skin and sweet green flesh.
+Dragonfruit: A tropical fruit with bright pink skin and white or pink flesh speckled with black seeds.
+Lychee: A small round fruit with a rough red shell and sweet translucent flesh.
+Pomegranate: A round fruit with a tough reddish outer skin and juicy seeds.
+Tangerine: A small citrus fruit similar to an orange but easier to peel.
+Grapefruit: A large round citrus fruit with juicy sour pulp.
+Nectarine: A smooth-skinned peach without fuzz, with sweet juicy flesh.
+Olive: A small bitter fruit with a hard pit, typically green when unripe and black when ripe.
+Date: A sweet brown oval fruit with a single stone inside.
+Mulberry: A small sweet dark purple fruit that grows on trees.
+Quince: A hard yellow fruit with a strong aroma, used in cooking and preserves.
+Acerola: A small cherry-like fruit with a tart flavor, high in vitamin C.
+Ackee: A tropical fruit with red skin and white or yellow flesh, toxic if eaten unripe.
+African cucumber: A fruit with green skin and white flesh, also known as "horned cucumber" or "kiwano."
+Açaí berry: A small dark purple fruit with a sweet taste, often used in smoothies and bowls.
+Ajwain: A small seed-like fruit used as a spice in Indian cooking.
+Akpi: A nut-like fruit used in West African cuisine.
+Ambarella: A tropical fruit with a tangy taste, also known as "June plum."
+American black elderberry: A dark purple fruit used in jams, jellies, and syrups.
+Amla: A small sour fruit, also known as Indian gooseberry.
+Ampalaya: A bitter gourd fruit often used in Asian cuisine.
+Andean blueberry: A small blue fruit native to South America, also known as "huckleberry."
+Araza: A tropical fruit with yellow skin and white flesh, native to South America.
+Arhat: A small fruit with a sweet and sour taste, also known as "luo han guo."
+Atemoya: A hybrid fruit of sugar apple and cherimoya, with sweet white flesh.
+Avocado leaves: Leaves from the avocado tree used in cooking for their aromatic flavor.
+Avocado oil: Oil extracted from avocado fruit, known for its health benefits and culinary uses.
+Babaco: A cylindrical fruit with yellow skin and juicy white flesh, similar to papaya.
+Bacaba: A dark purple fruit native to South America, used in beverages and desserts.
+Baobab: A large fruit with a hard shell and powdery white pulp, rich in nutrients.
+Barbadine: A large fruit with green skin and sweet white flesh, also known as "giant granadilla."
+Barberry: Small tart red berries used in cooking and herbal medicine.
+Barbados cherry: A small fruit with bright red skin and tart flavor, rich in vitamin C.
+Barhi: A soft and sweet date variety with a caramel-like taste.
+Bilimbi: A sour fruit used in Southeast Asian cuisine, also known as "cucumber tree."
+Bilberry: Small dark blue berries similar to blueberries, rich in antioxidants.
+Bitter melon: A bitter gourd fruit used in Asian cooking for its health benefits.
+Black mulberry: Dark purple sweet berries from the mulberry tree.
+Black sapote: A tropical fruit with dark brown flesh resembling chocolate pudding.
+Boysenberry: A hybrid berry with a sweet and tangy flavor, similar to raspberries and blackberries.
+Buddha's hand: A citrus fruit with finger-like segments and aromatic fragrance.
+Bunya nut: An edible nut from the bunya pine tree, native to Australia.
+Cactus pear: A fruit with prickly skin and sweet flesh, also known as "prickly pear."
+Calamondin: Small sour oranges used in cooking and beverages.
+Camu camu: A small sour berry with high vitamin C content, native to the Amazon rainforest.
+Cantaloupe: A sweet melon with orange flesh and ribbed skin.
+Cape gooseberry: Small orange berries encased in papery husks, also known as "goldenberry."
+Carob: A pod with sweet edible pulp, used as a chocolate substitute.
+Cashew apple: The swollen fruit stalk of the cashew tree, with a sweet and astringent taste.
+Chayote: A pear-shaped fruit with mild flavor, used in salads and stir-fries.
+Cherimoya: A tropical fruit with creamy white flesh and a custard-like texture.
+Chilean guava: Small purple berries with a tart flavor, native to Chile.
+Clementine: A small seedless citrus fruit, a hybrid between mandarin and sweet orange.
+Cloudberry: Small golden berries with a tart flavor, native to arctic regions.
+Coco de mer: A rare double coconut with large seeds, native to the Seychelles.
+Cranberry tree: A small tree producing tart red berries used in juices and sauces.
+Cucumber: A cylindrical green fruit commonly used in salads and pickles.
+Custard apple: A sweet tropical fruit with creamy white flesh and black seeds.
+Damson plum: Small tart plums used in jams, jellies, and desserts.
+Date palm: A palm tree producing sweet dates, cultivated in arid regions.
+Dead man's fingers: A type of fungus resembling fingers, found on decaying wood.
+Dewberry: Small dark berries similar to blackberries, growing on trailing vines.
+Durian: A large spiky fruit with a strong odor and creamy flesh, native to Southeast Asia.
+Elderberry: Small dark berries used in jams, syrups, and wine-making.
+Elephant apple: A large fruit with a sour taste, native to Southeast Asia.
+Feijoa: A green fruit with a fragrant flavor, native to South America.
+Finger lime: A citrus fruit with elongated vesicles, resembling caviar.
+Flacourtia: Small sour berries used in jams and preserves.
+Gac: A spiny fruit with orange-red flesh, rich in antioxidants.
+Galia melon: A sweet melon with green flesh and netted skin.
+Goji berry: Small red berries with a sweet and tangy flavor, used in traditional Chinese medicine.
+Golden kiwi: A sweeter and less acidic variety of kiwifruit with golden flesh.
+Gooseberry: Small tart berries used in jams, pies, and desserts.
+Granadilla: A type of passionfruit with orange skin and aromatic seeds.
+Grapefruit tree: A citrus tree producing large sour fruits used in juices and salads.
+Greengage: Small greenish-yellow plums with sweet juicy flesh.
+Ground cherry: Small orange berries with a sweet and tart flavor, enclosed in papery husks.
+Gubinge: A small green fruit native to Australia, also known as "Kakadu plum."
+Guinep: Small green fruits with sweet juicy flesh and a large seed, native to the Caribbean.
+Honeyberry: Small blue berries with a sweet and tangy flavor, also known as "haskap."
+Horned melon: A fruit with spiky yellow skin and green jelly-like flesh, also known as "kiwano."
+Indian fig: A type of cactus pear with sweet red flesh and edible seeds.
+Jaboticaba: Small dark berries growing directly on the trunk of the tree, native to Brazil.
+Jackfruit: A large tropical fruit with sweet yellow flesh and seeds used in cooking.
+Jambul: Small purple berries with a sweet and tart flavor, also known as "jamun."
+Japanese plum: A small round fruit with red or yellow skin and sweet juicy flesh.
+Jostaberry: A hybrid fruit of blackcurrant and gooseberry, with a tart flavor.
+Jujube: Small red or yellow fruits with sweet flesh, also known as "Chinese date."
+Juniper berry: Small blue berries used as a spice in gin production and culinary dishes.
+Kaffir lime: A citrus fruit with rough bumpy skin and aromatic leaves used in cooking.
+Kiwano: A fruit with spiky orange skin and green jelly-like flesh, also known as "horned melon."
+Kumquat: Small oval citrus fruits with sweet edible skin and tart flesh.
+Langsat: Small round fruits with translucent flesh and a sweet and sour taste.
+Lemon aspen: Small yellow fruits with a sour taste, native to Australia.
+Lingonberry: Small red berries with a tart flavor, commonly used in jams and sauces.
+Loganberry: A hybrid berry of raspberry and blackberry, with a tart flavor.
+Longan: Small round fruits with translucent flesh and a sweet floral flavor.
+Loquat: Small orange fruits with sweet juicy flesh and large seeds.
+Mamey sapote: A tropical fruit with pink-orange flesh and a sweet flavor reminiscent of sweet potato.
+Mangosteen: A tropical fruit with thick purple skin and juicy white segments.
+Maracuja: A type of passionfruit with purple skin and aromatic seeds.
+Marula: Small yellow fruits with a tart flavor, used in making alcoholic beverages.
+Maypop: A type of passionfruit native to North America, also known as "passionflower."
+Medlar: Small brown fruits with a unique flavor, resembling a cross between apple and pear.
+Miracle fruit: Small red berries that temporarily alter taste perception, making sour foods taste sweet.
+Muscadine: Large grapes with thick skins and sweet juicy flesh, native to the southern United States.
+Nance: Small yellow fruits with a tart flavor, commonly used in preserves and beverages.
+Naranjilla: Small orange fruits with a tart flavor, native to South America.
+Native peach: A small fuzzy fruit with sweet juicy flesh, native to Australia.
+Neem fruit: Small green fruits with a bitter taste, used in traditional medicine and cosmetics.
+Nungu: A type of palm fruit with translucent flesh and a jelly-like texture, native to India.
+Oblong kumquat: A variety of kumquat with elongated fruits and a sweet-tart flavor.
+Olive tree: A tree producing small bitter fruits used in cooking and oil production.
+Pawpaw: A tropical fruit with green skin and sweet orange flesh, native to the Americas.
+Pepino: A fruit with yellow skin and sweet juicy flesh, resembling a cross between melon and pear.
+Peruvian apple cactus: A cactus fruit with pink skin and white flesh, native to South America.
+Pitaya: A fruit with vibrant pink skin and white or pink flesh, also known as "dragon fruit."
+Pitanga: Small red fruits with a tart flavor, native to Brazil.
+Poha berry: Small orange berries with a tart flavor, native to Hawaii.
+Pomegranate tree: A small tree producing round fruits with a tough outer rind and juicy seeds.
+Prickly pear cactus: A cactus fruit with prickly skin and sweet flesh, native to the Americas.
+Pulasan: A tropical fruit with red skin and sweet juicy flesh, similar to rambutan.
+Pummelo: A large citrus fruit with thick green or yellow skin and sweet flesh.
+Quandong: Small red fruits with tart flavor, native to Australia.
+Rainier cherry: A variety of cherry with yellow skin and sweet juicy flesh.
+Ramón nut: An edible nut from the ramón tree, native to Central and South America.
+Red currant: Small red berries with a tart flavor, commonly used in jams and desserts.
+Red bayberry: Small red berries with a sweet and tart flavor, native to China.
+Red huckleberry: Small red berries with a tart flavor, native to North America.
+Rhubarb: Long pink or red stalks used in cooking and desserts, often mistaken for a fruit.
+Rose apple: A fruit with crisp white flesh and a floral flavor, native to Southeast Asia.
+Rowan berry: Small red berries with a tart flavor, commonly used in jams and jellies.
+Salak: A fruit with reddish-brown scaly skin and sweet juicy flesh, native to Indonesia.
+Sapodilla: A tropical fruit with brown skin and sweet juicy flesh, resembling caramel.
+Saskatoon berry: Small purple berries with a sweet and nutty flavor, native to North America.
+Sea buckthorn: Small orange berries with tart flavor, rich in vitamins and antioxidants.
+Soursop: A tropical fruit with spiky green skin and creamy white flesh, known for its medicinal properties.
+Star apple: A fruit with purple skin and sweet juicy flesh, resembling the shape of a star when sliced.
+Star fruit: A fruit with yellow skin and a star-shaped cross-section when sliced, with a sweet and tart flavor.
+Sugar apple: A tropical fruit with green scaly skin and sweet white flesh, resembling custard
