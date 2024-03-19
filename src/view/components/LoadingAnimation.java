@@ -4,25 +4,42 @@ import utils.WindowsFrameObject;
 import view.WindowsFrame;
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.List;
 
 public class LoadingAnimation {
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
-
+    private static SwingWorker<Void, Integer> worker;
     private static JProgressBar jProgressBar;
     public static JProgressBar getLoading(){
         jProgressBar = new JProgressBar();
         jProgressBar.setStringPainted(true);
+        // Add a window listener to handle frame closure
+        windows.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosed(WindowEvent e) {
+                // Check if the SwingWorker is running and cancel it if necessary
+                if (worker != null && !worker.isDone()) {
+                    worker.cancel(true);
+                }
+            }
+        });
         return jProgressBar;
     }
     // Method to start the loading animation
+// Method to start the loading animation
     public static void startLoading() {
         // Create a SwingWorker for background tasks
-        SwingWorker<Void, Integer> worker = new SwingWorker<Void, Integer>() {
+        worker = new SwingWorker<Void, Integer>() {
             @Override
             protected Void doInBackground() throws Exception {
                 // Simulate a long-running task
                 for (int i = 0; i <= 100; i++) {
+                    // Check if the task is cancelled
+                    if (isCancelled()) {
+                        break;
+                    }
                     // Update the progress
                     publish(i);
                     // Sleep to simulate work being done
