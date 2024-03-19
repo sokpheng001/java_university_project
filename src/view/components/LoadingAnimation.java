@@ -4,6 +4,7 @@ import utils.WindowsFrameObject;
 import view.WindowsFrame;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.List;
@@ -12,7 +13,7 @@ public class LoadingAnimation {
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
     private static SwingWorker<Void, Integer> worker;
     private static JProgressBar jProgressBar;
-    public static JProgressBar getLoading(){
+    public static void getLoading(){
         jProgressBar = new JProgressBar(0,100);
         jProgressBar.setStringPainted(true);
         // Add a window listener to handle frame closure
@@ -25,11 +26,12 @@ public class LoadingAnimation {
                 }
             }
         });
-        return jProgressBar;
+//        startLoading();
+        windows.add(jProgressBar, BorderLayout.CENTER);
     }
     // Method to start the loading animation
 // Method to start the loading animation
-    public static void startLoading() {
+    private static void startLoading() {
         // Create a SwingWorker for background tasks
         worker = new SwingWorker<Void, Integer>() {
             @Override
@@ -42,6 +44,8 @@ public class LoadingAnimation {
                     }
                     // Update the progress
                     publish(i);
+                    setProgress(i);
+                    System.out.println(getProgress());
                     // Sleep to simulate work being done
                     Thread.sleep(50);
                 }

@@ -1,5 +1,8 @@
 package repository;
 
+import view.ApplicationView;
+
+import java.awt.desktop.AppForegroundListener;
 import java.io.*;
 
 import java.util.Map;

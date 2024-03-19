@@ -2,6 +2,7 @@ package view.components;
 
 import view.WindowsFrame;
 import utils.WindowsFrameObject;
+import view.components.subFrame.InternalFrame1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -46,6 +47,12 @@ public class Menu {
 //        fileMenu.add(openItem);
         fileMenu.add(saveItem);
         saveItem.setPreferredSize(new Dimension(150,saveItem.getPreferredSize().height));
+        saveItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//                handle when click save
+            }
+        });
         fileMenu.addSeparator(); // Add separator line
         fileMenu.add(exitItem);
         // Add menus to menu bar

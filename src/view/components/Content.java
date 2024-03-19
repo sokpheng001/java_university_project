@@ -1,5 +1,6 @@
 package view.components;
 
+import repository.DataList;
 import repository.DataStore;
 import view.WindowsFrame;
 import utils.WindowsFrameObject;
@@ -20,14 +21,14 @@ public class Content{
     private final static JPanel content = new JPanel(new GridLayout(0,2));
     private  static DefaultListModel<String> words;
     private  static JList<String> jList;
-    private  static List<String> lists;
+    
     public static JPanel dictionaryContent(){
-        lists = new ArrayList<>();
-        DataStore.getAllWords().forEach((k,v)->{
-            lists.add(k);
-        });
+//        DataList.lists = new ArrayList<>();
+//        DataStore.getAllWords().forEach((k,v)->{
+//            DataList.lists.add(k);
+//        });
         words = new DefaultListModel<>();
-        lists.forEach(words::addElement);
+        DataList.lists.forEach(words::addElement);
         jList = new JList<>(words);
         JTextArea jTextArea = new JTextArea();
         JScrollPane jScrollPane = new JScrollPane(jTextArea);
@@ -80,7 +81,7 @@ public class Content{
     private static void filterWords(String word){
         try{
             DefaultListModel<String> defaultListModel = new DefaultListModel<>();
-            List<String> stringArrayList =lists;
+            List<String> stringArrayList =DataList.lists;
             stringArrayList.forEach(e->{
                 String item = e.toLowerCase();
                 if(item.contains(word.toLowerCase())){

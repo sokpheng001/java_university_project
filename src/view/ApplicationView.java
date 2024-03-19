@@ -1,5 +1,6 @@
 package view;
 
+import repository.DataStore;
 import utils.IconMaker;
 import utils.WindowsFrameObject;
 import view.components.*;
@@ -12,10 +13,9 @@ import java.awt.event.WindowEvent;
 
 public class ApplicationView {
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
-    public ApplicationView(){
+    public static void show(){
 //        loading
-        LoadingAnimation.startLoading();
-        windows.add(LoadingAnimation.getLoading(), BorderLayout.CENTER);
+//        LoadingAnimation.getLoading();
 //
         windows.setLayout(new BorderLayout());
         //
