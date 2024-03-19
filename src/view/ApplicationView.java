@@ -14,8 +14,8 @@ public class ApplicationView {
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
     public ApplicationView(){
 //        loading
-        windows.add(LoadingAnimation.getLoading(), BorderLayout.CENTER);
         LoadingAnimation.startLoading();
+        windows.add(LoadingAnimation.getLoading(), BorderLayout.CENTER);
 //
         windows.setLayout(new BorderLayout());
         //
