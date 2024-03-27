@@ -50,8 +50,8 @@ public class DataStore {
         ){
             List<Dictionary> dictionaryList = new ArrayList<>();
             for(int i=0;i<1;i++){
-                dictionaryList.add(new Dictionary(UUID.randomUUID().toString(),"Banana","គឺជាផ្លែឈឺមួយប្រភេទ"));
-                dictionaryList.add(new Dictionary(UUID.randomUUID().toString(),"Apple","គឺជាផ្លែឈឺមួយប្រភេទ"));
+                dictionaryList.add(new Dictionary(UUID.randomUUID().toString(),"Banana","គឺជាផ្លែឈឺមួយប្រភេទ ចេក"));
+                dictionaryList.add(new Dictionary(UUID.randomUUID().toString(),"Apple","គឺជាផ្លែឈឺមួយប្រភេទ ប៉ម"));
             }
             objectOutputStream.writeObject(dictionaryList);
             objectOutputStream.flush();

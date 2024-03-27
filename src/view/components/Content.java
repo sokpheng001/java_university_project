@@ -7,6 +7,7 @@ import view.WindowsFrame;
 import utils.WindowsFrameObject;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.event.ListSelectionEvent;
@@ -31,10 +32,19 @@ public class Content{
         words = new DefaultListModel<>();
         DataList.lists.forEach(words::addElement);
         jList = new JList<>(words);
+
         JTextArea jTextArea = new JTextArea();
         JScrollPane jScrollPane = new JScrollPane(jTextArea);
         System.out.println(DataStoreMap.words);
 //         listen when select each element of jlist
+//         add font to description of words
+        jTextArea.setText("This is a JTextArea with custom font.");
+        // Create an empty border with padding
+        int padding = 10; // Adjust the padding as needed
+        jTextArea.setBorder(new EmptyBorder(5,5,0, 0));
+        // Set font for the JTextArea
+        Font font = new Font("Khmer OS Metal Chrieng", Font.BOLD, 14); // Example font: Arial, bold, size 16
+        jTextArea.setFont(font);;
         jList.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {

@@ -8,7 +8,6 @@ public class Dictionary implements Serializable {
     @Serial
     private static final long serialVersionUID = 123456789L; // Custom serial version UID
     private String uuid;
-
     private String word;
     private String description;
 
