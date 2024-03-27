@@ -13,8 +13,30 @@ public class SearchArea {
     public final static JTextField searchField = new JTextField(30);
     private final static Dimension textFieldSize = searchField.getPreferredSize();
     private final static JButton searchButton = new JButton("Search");
+    private static JButton previousButton;
+    private static JButton nextButton;
+    private final static JButton printButton = new JButton("Print");
     public static JPanel getSearchInput(){
-
+//        add cursor to button print
+        handCursorOnButton(printButton);
+        printButton.setName("print button");
+//        previous button
+        ImageIcon previousIcon = new ImageIcon("previous.png");
+        Image scaledPreviousImg = previousIcon.getImage().getScaledInstance(17,17,Image.SCALE_SMOOTH);
+        previousIcon = new ImageIcon(scaledPreviousImg);
+        previousButton = new JButton(previousIcon);
+        previousButton.setName("previous button");
+        // Set cursor to hand cursor when mouse enters the button area
+        handCursorOnButton(previousButton);
+        //
+//        next button
+        ImageIcon nextIcon = new ImageIcon("next.png");
+        Image scaledNextImg = nextIcon.getImage().getScaledInstance(17,17,Image.SCALE_SMOOTH);
+        nextIcon = new ImageIcon(scaledNextImg);
+        nextButton = new JButton(nextIcon);
+        nextButton.setName("next button");
+        // Set cursor to hand cursor when mouse enters the button area
+        handCursorOnButton(nextButton);
         // Action listener for the search button
         searchButton.addActionListener(e -> {
             String searchText = searchField.getText();
@@ -25,27 +47,11 @@ public class SearchArea {
 //        search button
 
 //      key listener
-        searchField.addKeyListener(new KeyListener() {
-                                       @Override
-                                       public void keyTyped(KeyEvent e) {
-
-                                       }
-                                       @Override
-                                       public void keyPressed(KeyEvent e) {
-                                           if(e.getKeyCode()==KeyEvent.VK_ENTER){
-//                                               JOptionPane.showMessageDialog(frame,searchField.getText());
-                                           }
-                                       }
-                                       @Override
-                                       public void keyReleased(KeyEvent e) {
-
-                                       }
-                                   }
-        );
 //         add more
-
+        panel.add(previousButton);
         panel.add(searchField);
-        panel.add(searchButton);
+        panel.add(nextButton);
+        panel.add(printButton);
         //
         textFieldSize.height = 30;
         searchField.setPreferredSize(textFieldSize);
@@ -79,5 +85,28 @@ public class SearchArea {
 //        frame.getContentPane().add(panel);
         //frame.pack(); // Adjusts the frame size to fit its components
         return panel;
+    }
+    private static void handCursorOnButton(JButton jButton){
+        jButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                jButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                jButton.setCursor(Cursor.getDefaultCursor());
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //                check which button - next / previous
+                if(jButton.getName().equalsIgnoreCase("next button")){
+                    System.out.println("This is next button");
+                }else if(jButton.getName().equalsIgnoreCase("previous button")){
+                    System.out.println("This is previous button");
+                }
+            }
+        });
     }
 }

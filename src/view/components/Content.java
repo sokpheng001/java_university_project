@@ -2,6 +2,7 @@ package view.components;
 
 import repository.DataList;
 import repository.DataStore;
+import repository.DataStoreMap;
 import view.WindowsFrame;
 import utils.WindowsFrameObject;
 
@@ -32,6 +33,7 @@ public class Content{
         jList = new JList<>(words);
         JTextArea jTextArea = new JTextArea();
         JScrollPane jScrollPane = new JScrollPane(jTextArea);
+        System.out.println(DataStoreMap.words);
 //         listen when select each element of jlist
         jList.addListSelectionListener(new ListSelectionListener() {
             @Override
@@ -44,7 +46,7 @@ public class Content{
                             STR."""
                                     This is meaning of the word [ \{selectedWord} ]
                                     Description:
-                                    \{DataStore.getAllWords().get(selectedWord)}
+                                    \{DataStoreMap.words.get(selectedWord)}
                                     """
                     );
                     jTextArea.setEditable(false);
@@ -81,7 +83,7 @@ public class Content{
     private static void filterWords(String word){
         try{
             DefaultListModel<String> defaultListModel = new DefaultListModel<>();
-            List<String> stringArrayList =DataList.lists;
+            List<String> stringArrayList = DataList.lists;
             stringArrayList.forEach(e->{
                 String item = e.toLowerCase();
                 if(item.contains(word.toLowerCase())){

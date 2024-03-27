@@ -30,6 +30,7 @@ public class ApplicationView {
                 } else {
                     windows.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                 }
+
             }
         });
         //menu

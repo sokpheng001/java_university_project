@@ -8,6 +8,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Menu {
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
@@ -25,6 +27,10 @@ public class Menu {
     // create search filed
 
     public static void createMenu(){
+        //add cursor
+        handCursor(fileMenu);
+        handCursor(helpMenu);
+        handCursor(accountMenu);
         // Add action listeners to menu items
         exitItem.addActionListener(new ActionListener() {
             @Override
@@ -63,5 +69,24 @@ public class Menu {
         menuBar.add(accountMenu);
         // Set menu bar to frame
         windows.setJMenuBar(menuBar);
+    }
+    private static void handCursor(JMenu jMenu){
+        jMenu.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+                jMenu.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                jMenu.setCursor(Cursor.getDefaultCursor());
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //                check
+
+            }
+        });
     }
 }
