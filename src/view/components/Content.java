@@ -1,8 +1,8 @@
 package view.components;
 
 import repository.DataList;
-import repository.DataStore;
 import repository.DataStoreMap;
+import utils.FontComponent;
 import view.WindowsFrame;
 import utils.WindowsFrameObject;
 
@@ -13,26 +13,29 @@ import javax.swing.event.DocumentListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.StringTemplate.STR;
 
 public class Content{
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
-    private final static JPanel content = new JPanel(new GridLayout(0,2));
+    public final static JPanel content = new JPanel(new GridLayout(0,2));
     private  static DefaultListModel<String> words;
     private  static JList<String> jList;
-    
+    public static void loadingWord(){
+        words = new DefaultListModel<>();
+        DataList.lists.forEach(words::addElement);
+        DataList.lists.forEach(System.out::println);
+        jList = new JList<>(words);
+        jList.setBorder(new EmptyBorder(5,5,0, 0));
+    }
     public static JPanel dictionaryContent(){
 //        DataList.lists = new ArrayList<>();
 //        DataStore.getAllWords().forEach((k,v)->{
 //            DataList.lists.add(k);
 //        });
-        words = new DefaultListModel<>();
-        DataList.lists.forEach(words::addElement);
-        jList = new JList<>(words);
 
+        loadingWord();
         JTextArea jTextArea = new JTextArea();
         JScrollPane jScrollPane = new JScrollPane(jTextArea);
         System.out.println(DataStoreMap.words);
@@ -43,8 +46,8 @@ public class Content{
         int padding = 10; // Adjust the padding as needed
         jTextArea.setBorder(new EmptyBorder(5,5,0, 0));
         // Set font for the JTextArea
-        Font font = new Font("Khmer OS Metal Chrieng", Font.BOLD, 14); // Example font: Arial, bold, size 16
-        jTextArea.setFont(font);;
+         // Example font: Arial, bold, size 16
+        jTextArea.setFont(FontComponent.font);
         jList.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -54,8 +57,8 @@ public class Content{
 //                    JOptionPane.showMessageDialog(windows, "You selected: " + selectedWord);
                     jTextArea.setText(
                             STR."""
-                                    This is meaning of the word [ \{selectedWord} ]
-                                    Description:
+                                    អត្ថន័យរបស់ពាក្យ [ \{selectedWord} ]
+                                    ខ្លឹមសារ:
                                     \{DataStoreMap.words.get(selectedWord)}
                                     """
                     );

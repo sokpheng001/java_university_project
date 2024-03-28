@@ -18,7 +18,7 @@ public class SearchArea {
     private final static JButton printButton = new JButton("Print");
     public static JPanel getSearchInput(){
 //        add cursor to button print
-        handCursorOnButton(printButton);
+        ButtonHandCursorHandler.handCursorOnButton(printButton);
         printButton.setName("print button");
 //        previous button
         ImageIcon previousIcon = new ImageIcon("previous.png");
@@ -27,7 +27,7 @@ public class SearchArea {
         previousButton = new JButton(previousIcon);
         previousButton.setName("previous button");
         // Set cursor to hand cursor when mouse enters the button area
-        handCursorOnButton(previousButton);
+        ButtonHandCursorHandler.handCursorOnButton(previousButton);
         //
 //        next button
         ImageIcon nextIcon = new ImageIcon("next.png");
@@ -36,7 +36,7 @@ public class SearchArea {
         nextButton = new JButton(nextIcon);
         nextButton.setName("next button");
         // Set cursor to hand cursor when mouse enters the button area
-        handCursorOnButton(nextButton);
+        ButtonHandCursorHandler.handCursorOnButton(nextButton);
         // Action listener for the search button
         searchButton.addActionListener(e -> {
             String searchText = searchField.getText();
@@ -85,28 +85,5 @@ public class SearchArea {
 //        frame.getContentPane().add(panel);
         //frame.pack(); // Adjusts the frame size to fit its components
         return panel;
-    }
-    private static void handCursorOnButton(JButton jButton){
-        jButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                jButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                jButton.setCursor(Cursor.getDefaultCursor());
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-                //                check which button - next / previous
-                if(jButton.getName().equalsIgnoreCase("next button")){
-                    System.out.println("This is next button");
-                }else if(jButton.getName().equalsIgnoreCase("previous button")){
-                    System.out.println("This is previous button");
-                }
-            }
-        });
     }
 }

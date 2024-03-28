@@ -17,20 +17,22 @@ public class Menu {
     private final static JMenuBar menuBar = new JMenuBar();
     // Create menus
     private final static JMenu fileMenu = new JMenu("File");
-    private final JMenu editMenu = new JMenu("Edit");
     private static final JMenu helpMenu = new JMenu("Help");
     private static final JMenu accountMenu = new JMenu("Account");
     // Create menu items
     private final JMenuItem openItem = new JMenuItem("Open");
     private static final JMenuItem saveItem = new JMenuItem("Save");
+    private final static JMenuItem addNewWord = new JMenuItem("Add New Word");
     private static final JMenuItem exitItem = new JMenuItem("Exit");
     // create search filed
-
     public static void createMenu(){
         //add cursor
         handCursor(fileMenu);
         handCursor(helpMenu);
         handCursor(accountMenu);
+        handCursor(saveItem);
+        handCursor(exitItem);
+        handCursor(addNewWord);
         // Add action listeners to menu items
         exitItem.addActionListener(new ActionListener() {
             @Override
@@ -60,6 +62,13 @@ public class Menu {
             }
         });
         fileMenu.addSeparator(); // Add separator line
+        fileMenu.add(addNewWord);
+        addNewWord.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddNewWordForm.open();
+            }
+        });
         fileMenu.add(exitItem);
         // Add menus to menu bar
         menuBar.add(fileMenu);
@@ -70,11 +79,10 @@ public class Menu {
         // Set menu bar to frame
         windows.setJMenuBar(menuBar);
     }
-    private static void handCursor(JMenu jMenu){
+    private static void handCursor(JComponent jMenu){
         jMenu.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-
                 jMenu.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             }
             @Override

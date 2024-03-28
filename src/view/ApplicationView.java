@@ -45,7 +45,7 @@ public class ApplicationView {
         windows.add(Footer.description(), BorderLayout.PAGE_END);
         //
         windows.setTitle("Royal University of Phnom Penh - Dictionary");
-        windows.setSize(800,500);
+        windows.setSize(800,550);
         windows.setLocationRelativeTo(null);
         windows.setVisible(true);
     }

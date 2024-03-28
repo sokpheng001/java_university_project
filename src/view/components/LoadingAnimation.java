@@ -45,7 +45,7 @@ public class LoadingAnimation {
                     // Update the progress
                     publish(i);
                     setProgress(i);
-                    System.out.println(getProgress());
+//                    System.out.println(getProgress());
                     // Sleep to simulate work being done
                     Thread.sleep(50);
                 }

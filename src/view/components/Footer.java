@@ -20,7 +20,7 @@ public class Footer {
         }else {
             numberOfWord = STR."\{String.valueOf(word)}";
         }
-        JLabel jLabel = new JLabel(STR."Copyright - RUPP - 202. Dictionary with \{numberOfWord} words");
+        JLabel jLabel = new JLabel(STR."Copyright - RUPP - 2024. Dictionary with \{numberOfWord} words");
         descriptionPlace.add(jLabel);
         descriptionPlace.setBackground(Color.LIGHT_GRAY);
         return descriptionPlace;

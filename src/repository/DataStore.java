@@ -50,12 +50,16 @@ public class DataStore {
         ){
             List<Dictionary> dictionaryList = new ArrayList<>();
             for(int i=0;i<1;i++){
-                dictionaryList.add(new Dictionary(UUID.randomUUID().toString(),"Banana","គឺជាផ្លែឈឺមួយប្រភេទ ចេក"));
-                dictionaryList.add(new Dictionary(UUID.randomUUID().toString(),"Apple","គឺជាផ្លែឈឺមួយប្រភេទ ប៉ម"));
+                dictionaryList.add(new Dictionary(UUID.randomUUID().toString(),"Banana",
+                        """
+                                គឺជាផ្លែឈើ ដែលគេយកទៅធ្វើ បង្អែម ឬ ញុាំ ។
+                                វាគឺជា ផ្លែឈើ\s
+                                """
+                        )
+                );
             }
             objectOutputStream.writeObject(dictionaryList);
             objectOutputStream.flush();
-
         }catch (Exception exception){
             System.out.println("Problem during writing object to a file.!!!");
         }

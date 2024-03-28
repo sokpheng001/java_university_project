@@ -18,7 +18,6 @@ import java.util.Objects;
 
 
 public class LoadingFrame {
-
     // Create a progress bar
     private static final JProgressBar progressBar = new JProgressBar();
     private final static WindowsFrame windows = WindowsFrameObject.WINDOWS_APP_OBJECT.getObject();
@@ -34,7 +33,6 @@ public class LoadingFrame {
         progressBar.setStringPainted(true); // Display the percentage
 //        progressBar.setMinimum(0);
 //        progressBar.setMaximum(100);
-
         // Create a button to start the progress
         JButton startButton = new JButton("Start Loading");
         startButton.addActionListener(new ActionListener() {
@@ -42,9 +40,7 @@ public class LoadingFrame {
             public void actionPerformed(ActionEvent e) {
                 startLoading();
             }
-
         });
-
         // Create a panel to hold the progress bar and button
         loadingForm.setLayout(new BorderLayout());
         loadingForm.add(progressBar, BorderLayout.CENTER);
@@ -54,7 +50,6 @@ public class LoadingFrame {
         loadingForm.setLocationRelativeTo(windows); // Center on parent frame
 //        frame.add(panel);
 //        frame.setVisible(true);
-//
         loadingForm.setVisible(true);
     }
     // Method to simulate loading progress
@@ -90,11 +85,9 @@ public class LoadingFrame {
                     setProgress(i);
 //                    System.out.println(getProgress());
                     // Sleep to simulate work being done
-                    Thread.sleep(10);
+                    Thread.sleep(0);
 //                    read words from file
-
                 }
-
                 return null;
             }
             @Override
