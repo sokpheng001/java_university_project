@@ -1,7 +1,7 @@
 package view.components;
-
 import view.WindowsFrame;
 import utils.WindowsFrameObject;
+import view.components.mouseHover.HandCursorHandler;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ public class SearchArea {
     private final static JButton printButton = new JButton("Print");
     public static JPanel getSearchInput(){
 //        add cursor to button print
-        ButtonHandCursorHandler.handCursorOnButton(printButton);
+        HandCursorHandler.handCursorOnButton(printButton);
         printButton.setName("print button");
 //        previous button
         ImageIcon previousIcon = new ImageIcon("previous.png");
@@ -27,7 +27,7 @@ public class SearchArea {
         previousButton = new JButton(previousIcon);
         previousButton.setName("previous button");
         // Set cursor to hand cursor when mouse enters the button area
-        ButtonHandCursorHandler.handCursorOnButton(previousButton);
+        HandCursorHandler.handCursorOnButton(previousButton);
         //
 //        next button
         ImageIcon nextIcon = new ImageIcon("next.png");
@@ -36,7 +36,7 @@ public class SearchArea {
         nextButton = new JButton(nextIcon);
         nextButton.setName("next button");
         // Set cursor to hand cursor when mouse enters the button area
-        ButtonHandCursorHandler.handCursorOnButton(nextButton);
+        HandCursorHandler.handCursorOnButton(nextButton);
         // Action listener for the search button
         searchButton.addActionListener(e -> {
             String searchText = searchField.getText();

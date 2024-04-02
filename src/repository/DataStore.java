@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
+import javax.sql.rowset.serial.SerialStruct;
+import javax.swing.plaf.ToolBarUI;
 import java.io.*;
 
 import java.util.*;
@@ -50,11 +52,22 @@ public class DataStore {
         ){
             List<Dictionary> dictionaryList = new ArrayList<>();
             for(int i=0;i<1;i++){
-                dictionaryList.add(new Dictionary(UUID.randomUUID().toString(),"Banana",
+                dictionaryList.add(
+                        new Dictionary(UUID.randomUUID().toString(),"Banana",
                         """
+                                - ថ្នាក់ពាក្យ ជា (នាម)
                                 គឺជាផ្លែឈើ ដែលគេយកទៅធ្វើ បង្អែម ឬ ញុាំ ។
                                 វាគឺជា ផ្លែឈើ\s
                                 """
+                        )
+                );
+                dictionaryList.add(
+                        new Dictionary(UUID.randomUUID().toString(),"Apple",
+                                """
+                                        - ថ្នាក់ពាក្យ ជា (នាម)
+                                        គឺជាផ្លែឈើ ដែលគេយកទៅធ្វើ បង្អែម ឬ ញុាំ ។
+                                        វាគឺជា ផ្លែឈើ\s
+                                        """
                         )
                 );
             }
@@ -129,5 +142,21 @@ public class DataStore {
         }catch (IOException exception){
             System.out.println(exception.getMessage());
         }
+    }
+//
+    public static void writeDataToFile(String word, String content){
+        try(ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("dataStore/newGenWordsFile.bin"))){
+            List<Dictionary> dictionaryList =                     new ArrayList<>();
+            dictionaryList.add(
+                    new Dictionary(
+                            UUID.randomUUID().toString(),
+                            word,
+                            content
+                    ));
+            objectOutputStream.writeObject(
+                    dictionaryList
+            );
+            objectOutputStream.flush();
+        }catch (Exception ignored){}
     }
 }

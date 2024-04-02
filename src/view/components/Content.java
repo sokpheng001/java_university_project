@@ -3,8 +3,10 @@ package view.components;
 import repository.DataList;
 import repository.DataStoreMap;
 import utils.FontComponent;
+import utils.WordSearchedHistoryList;
 import view.WindowsFrame;
 import utils.WindowsFrameObject;
+import view.components.mouseHover.HandCursorHandler;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -34,7 +36,6 @@ public class Content{
 //        DataStore.getAllWords().forEach((k,v)->{
 //            DataList.lists.add(k);
 //        });
-
         loadingWord();
         JTextArea jTextArea = new JTextArea();
         JScrollPane jScrollPane = new JScrollPane(jTextArea);
@@ -48,6 +49,9 @@ public class Content{
         // Set font for the JTextArea
          // Example font: Arial, bold, size 16
         jTextArea.setFont(FontComponent.font);
+//        set up JList with hand cursor
+        jList.setName("word");
+        HandCursorHandler.handCursorOnButton(jList);
         jList.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -62,6 +66,8 @@ public class Content{
                                     \{DataStoreMap.words.get(selectedWord)}
                                     """
                     );
+                    WordSearchedHistoryList.searchedWord.add(selectedWord);
+                    System.out.println(WordSearchedHistoryList.searchedWord);
                     jTextArea.setEditable(false);
                     content.add(jScrollPane);
                     content.revalidate();

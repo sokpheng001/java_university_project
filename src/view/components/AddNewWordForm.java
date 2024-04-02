@@ -1,11 +1,11 @@
 package view.components;
 
-import repository.DataList;
 import repository.DataStore;
-import repository.DataStoreMap;
-import utils.FontComponent;
+
 import utils.WindowsFrameObject;
 import view.WindowsFrame;
+import view.components.mouseHover.HandCursorHandler;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -51,8 +51,8 @@ public class AddNewWordForm {
         inputDescriptionPanel.add(new JScrollPane(descriptionInput));
 //add button
 
-        ButtonHandCursorHandler.handCursorOnButton(cancelButton);
-        ButtonHandCursorHandler.handCursorOnButton(addButton);
+        HandCursorHandler.handCursorOnButton(cancelButton);
+        HandCursorHandler.handCursorOnButton(addButton);
         buttonManagerPanel.add(cancelButton);
         buttonManagerPanel.add(addButton);
         addButton.setName("addNewWord button");
@@ -82,14 +82,9 @@ public class AddNewWordForm {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DataStoreMap.words.put(
-                        wordInput.getText(),
-                        descriptionInput.getText()
-                )   ;
-                DataList.lists.add(wordInput.getText());
-
-                Content.dictionaryContent();
-                System.out.println(DataList.lists);
+                System.out.println(wordInput.getText());
+                System.out.println(descriptionInput.getText());
+                DataStore.writeDataToFile(wordInput.getText(),descriptionInput.getText());
             }
         });
     }

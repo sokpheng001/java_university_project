@@ -1,12 +1,12 @@
-package view.components;
+package view.components.mouseHover;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class ButtonHandCursorHandler {
-    public static void handCursorOnButton(JButton jButton){
+public class HandCursorHandler {
+    public static void handCursorOnButton(JComponent jButton){
         jButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
